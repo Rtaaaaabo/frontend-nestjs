@@ -4,8 +4,6 @@ import { tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Storage } from '@ionic/storage';
 import { User } from '../interface/user';
-import { async } from 'q';
-import { access } from 'fs';
 
 @Injectable({
   providedIn: 'root'

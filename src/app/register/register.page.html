@@ -1,9 +1,66 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>ChatKit Demo Nakagawa</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+  <form #f="ngForm" (ngSubmit)="register(f)">
+    <ion-grid>
+      <ion-row justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>登録</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input
+                name="name"
+                type="text"
+                placeholder="名前"
+                ngModel
+                required
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input
+                name="email"
+                type="email"
+                placeholder='<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bdc4d2c8cffdd8d0dcd4d193ded2d0">[email protected]</a>'
+                ngModel
+                required
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input
+                name="password"
+                type="password"
+                placeholder="Password"
+                ngModel
+                required
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input
+                name="confirm"
+                type="password"
+                placeholder="Pass again"
+                ngModel
+                required
+              ></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button
+              size="large"
+              type="submit"
+              [disabled]="f.invalid"
+              expand="block"
+              >登録</ion-button
+            >
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
 </ion-content>
