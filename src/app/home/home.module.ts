@@ -13,11 +13,11 @@ import { HomePage } from './home.page';
     IonicModule,
     RouterModule.forChild([
       {
-        path: '',
+        path: ':id',
         component: HomePage
       }
     ])
   ],
   declarations: [HomePage]
 })
-export class HomePageModule {}
+export class HomePageModule { }
