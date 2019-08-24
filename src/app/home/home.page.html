@@ -13,7 +13,7 @@
     </ion-button>
   </div>
   <h4>ユーザー</h4>
-  <ion-spinner name="dots" *ngIf="let user of userList"></ion-spinner>
+  <ion-spinner name="dots" *ngIf="userList.length === 0"></ion-spinner>
   <ion-list>
     <ion-item class="user-item" *ngFor="let user of userList">
       <div class="user-avator">

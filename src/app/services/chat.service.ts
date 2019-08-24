@@ -36,7 +36,7 @@ export class ChatService {
       hooks: {
         onMessage: message => {
           this.message.push(message);
-          this.messageSubject.next(this.message);
+          this.messagesSubject.next(this.message);
         }
       },
       messageLimit: 20
