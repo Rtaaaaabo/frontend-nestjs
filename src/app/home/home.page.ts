@@ -17,6 +17,7 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.userId = this.route.snapshot.params.id;
+    console.log(this.userId);
     this.chatService.connectToChatkit(this.userId);
     this.chatService.getUser().subscribe((users) => {
       this.userList = users;

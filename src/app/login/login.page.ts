@@ -8,7 +8,7 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  showError: boolean = false;
+  showError = false;
 
   constructor(private authService: AuthService, private router: Router) { }
 
@@ -25,5 +25,4 @@ export class LoginPage implements OnInit {
       }
     });
   }
-
 }
