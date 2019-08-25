@@ -10,8 +10,8 @@ export class ChatService {
 
   AUTH_URL = 'http://localhost:3000/token';
   INSTANCE_LOCATOR = 'v1:us1:de477ab4-3933-44e0-82f5-0d5e809d516c';
-  GENERAL_ROOM_ID = 'f0e2b2b8-f89c-4a3b-be67-311dcf52da2d:niw8lHGrmxfQ1FzljoTHqOnRMjXJPni2fIIGEBWwb54=';
-  GENERAL_ROOM_INDEX = '';
+  GENERAL_ROOM_ID = 'c33cbe78-f668-4fa2-ba50-5bd09dd7faf9';
+  GENERAL_ROOM_INDEX = 0;
 
   chatManager: ChatManager;
   currentUser;
@@ -30,6 +30,7 @@ export class ChatService {
     });
 
     this.currentUser = await this.chatManager.connect();
+    console.log(this.currentUser);
 
     await this.currentUser.subscribeToRoom({
       roomId: this.GENERAL_ROOM_ID,
