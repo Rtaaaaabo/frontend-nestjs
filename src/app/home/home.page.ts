@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  userId: string = '';
+  userId = '';
   userList: any = [];
 
   constructor(private chatService: ChatService, private route: ActivatedRoute) { }

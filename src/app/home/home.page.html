@@ -8,10 +8,12 @@
 
 <ion-content padding>
   <div text-center>
-    <ion-button color="lignt" outline size="large" [routerLink]="'/chat'">
+    <ion-button color="light" outline size="large" [routerLink]="'/chat'">
       <ion-icon name="chatbubbles"></ion-icon>
+      チャットのスタート
     </ion-button>
   </div>
+
   <h4>ユーザー</h4>
   <ion-spinner name="dots" *ngIf="userList.length === 0"></ion-spinner>
   <ion-list>
