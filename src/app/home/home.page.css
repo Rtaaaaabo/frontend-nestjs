@@ -14,6 +14,10 @@
 .user-item .user-presence {
   flex: 1;
 }
+.user-item .label-user-info {
+  width: 200px;
+  margin-right: 40px;
+}
 .user-item .user-online {
   color: #32eb32;
 }
